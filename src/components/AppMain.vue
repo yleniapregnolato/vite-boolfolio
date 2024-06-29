@@ -22,9 +22,16 @@ export default {
             <div class="col" v-for="project in projects">
                 <div class="card">
                     <div class="card-body">
-                        <h3>{{ project.title }}</h3>
-                        <p>Tipologia: {{ project.type? project.type.name : 'nessuna tipologia selezionata' }}</p>
-                        <p>Tecnologie: {{ project.technology ? project.technology.name : "nessuna tecnologia selezionata"}}</p>
+                        <h2>{{ project.title }}</h2>
+                        <div>
+                            <h4 class="fw-bold">Tipologia:</h4>
+                            <p>{{ project.type ? project.type.name : 'nessuna tipologia selezionata' }}</p>
+                        </div>
+                        <h4 class="fw-bold">Tecnologie:</h4>
+                        <div v-for="technology in project.technologies">
+                            <p>{{ technology.name }}</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
