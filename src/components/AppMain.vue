@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios';
+
 export default {
     data() {
         return {
@@ -22,6 +23,8 @@ export default {
                 <div class="card">
                     <div class="card-body">
                         <h3>{{ project.title }}</h3>
+                        <p>Tipologia: {{ project.type? project.type.name : 'nessuna tipologia selezionata' }}</p>
+                        <p>Tecnologie: {{ project.technology ? project.technology.name : "nessuna tecnologia selezionata"}}</p>
                     </div>
                 </div>
             </div>
@@ -29,5 +32,4 @@ export default {
     </div>
 </template>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
