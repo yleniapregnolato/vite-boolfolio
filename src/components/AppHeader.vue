@@ -13,6 +13,7 @@ export default {};
       <div class="navbar-nav">
         <router-link :to="{ name: 'home' }" class="nav-link" aria-current="page" href="#">Home</router-link>
         <router-link :to="{ name: 'projects' }" class="nav-link" aria-current="page" href="#">Progetti</router-link>
+        <router-link :to="{ name: 'about' }" class="nav-link" aria-current="page" href="#">About Us</router-link>
       </div>
     </div>
   </div>
