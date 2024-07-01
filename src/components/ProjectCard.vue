@@ -1,17 +1,23 @@
 <script>
 export default {
-
-};
+    props: {
+        project: Object
+    }
+}
 </script>
 
 <template>
-    <div class="col" v-for="project in projects">
-        <div class="card">
-            <div class="card-body">
-                <h3>{{ project.title }}</h3>
+    <div class="card h-100">
+        <div class="card-body">
+            <h2>{{ project.title }}</h2>
+            <div>
+                <h4 class="fw-bold">Tipologia:</h4>
+                <p>{{ project.type ? project.type.name : 'nessuna tipologia selezionata' }}</p>
+            </div>
+            <h4 class="fw-bold">Tecnologie:</h4>
+            <div v-for="technology in project.technologies">
+                <p>{{ technology.name }}</p>
             </div>
         </div>
     </div>
 </template>
-
-<style scoped lang="scss"></style>

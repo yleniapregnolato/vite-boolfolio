@@ -1,7 +1,11 @@
 <script>
 import axios from 'axios';
+import ProjectCard from './ProjectCard.vue';
 
 export default {
+    components: {
+        ProjectCard,
+    },
     data() {
         return {
             projects: []
@@ -20,20 +24,7 @@ export default {
         <h1 class="mb-4 mt-4">PROGETTI:</h1>
         <div class="row row-cols-4 g-4 mt-4">
             <div class="col" v-for="project in projects">
-                <div class="card">
-                    <div class="card-body">
-                        <h2>{{ project.title }}</h2>
-                        <div>
-                            <h4 class="fw-bold">Tipologia:</h4>
-                            <p>{{ project.type ? project.type.name : 'nessuna tipologia selezionata' }}</p>
-                        </div>
-                        <h4 class="fw-bold">Tecnologie:</h4>
-                        <div v-for="technology in project.technologies">
-                            <p>{{ technology.name }}</p>
-                        </div>
-
-                    </div>
-                </div>
+                <ProjectCard :project="project" />
             </div>
         </div>
     </div>
