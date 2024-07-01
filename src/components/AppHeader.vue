@@ -11,9 +11,8 @@ export default {};
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Progetti</a>
-        <a class="nav-link" href="#">About Us</a>
+        <router-link :to="{ name: 'home' }" class="nav-link" aria-current="page" href="#">Home</router-link>
+        <router-link :to="{ name: 'projects' }" class="nav-link" aria-current="page" href="#">Progetti</router-link>
       </div>
     </div>
   </div>
