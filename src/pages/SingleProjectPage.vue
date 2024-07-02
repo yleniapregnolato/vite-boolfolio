@@ -10,8 +10,9 @@ export default {
     created() {
         const slug = this.$route.params.slug;
         axios.get(`http://127.0.0.1:8000/api/projects/${slug}`).then(resp => {
-            this.project = resp.data.results;
+            this.project = resp.data;
         })
+        
         .catch((error) => {});
     },
 
@@ -19,9 +20,8 @@ export default {
 </script>
 
 <template>
-    <div class="container" v-if="project !== null">
+    <div class="container" v-if="project">
         <h2>{{ project.title }}</h2>
-        
     </div>
 </template>
 
