@@ -24,7 +24,9 @@ export default {
         <h1 class="mb-4 mt-4">PROGETTI:</h1>
         <div class="row row-cols-4 g-4 mt-4">
             <div class="col" v-for="project in projects">
-                <ProjectCard :project="project" />
+                <router-link :to="{ name: 'single-project', params: { slug: project.slug } }">
+                    <ProjectCard :project="project" />
+                </router-link>
             </div>
         </div>
     </div>

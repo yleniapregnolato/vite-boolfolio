@@ -9,7 +9,7 @@ export default {
 <template>
     <div class="card h-100">
         <div class="card-body">
-            <h2>{{ project.title }}</h2>
+                <h2>{{ project.title }}</h2>
             <div>
                 <h4 class="fw-bold">Tipologia:</h4>
                 <p>{{ project.type ? project.type.name : 'nessuna tipologia selezionata' }}</p>
