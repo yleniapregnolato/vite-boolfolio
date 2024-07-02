@@ -14,10 +14,18 @@ export default {
                 <h4 class="fw-bold">Tipologia:</h4>
                 <p>{{ project.type ? project.type.name : 'nessuna tipologia selezionata' }}</p>
             </div>
-            <h4 class="fw-bold">Tecnologie:</h4>
-            <div v-for="technology in project.technologies">
-                <p>{{ technology.name }}</p>
-            </div>
+            <h4 class="fw-bold">Descrizione</h4>
+            <p class="md_description">{{ project.content }}</p>
         </div>
     </div>
 </template>
+
+<style scoped lang="scss">
+.card-body {
+    .md_description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+</style>
