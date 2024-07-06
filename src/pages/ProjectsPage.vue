@@ -24,7 +24,7 @@ export default {
         <h1 class="mb-4 mt-4">PROGETTI:</h1>
         <div class="row row-cols-4 g-4 mt-4">
             <div class="col" v-for="project in projects">
-                <router-link :to="{ name: 'single-project', params: { slug: project.slug } }">
+                <router-link :to="{ name: 'single-project', params: { slug: project.slug } }" class="md_underline">
                     <ProjectCard :project="project" />
                 </router-link>
             </div>
@@ -32,4 +32,11 @@ export default {
     </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.md_underline {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+</style>
